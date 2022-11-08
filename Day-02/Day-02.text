@@ -1,0 +1,91 @@
+Day-02[08-11-2022]:
+===================
+	Good Morning to All..
+
+	Variables
+		- Values assignments
+
+	Input and Output Formatting
+		-,
+		-%
+		- .format
+		- f
+
+	Operators:
+		- Arithmetic => +,-,*,/,%,//,**
+		- Bitwise => &,|,>>,<<
+		- Logical => AND,OR,NOT
+		- Relational => >,<,>=,<=,==
+		- Membership => in,not in
+		- Identity => is, is not
+		- Assignment => +=,-=,*=,/=,//=,**=
+
+	Conditional Statements:
+	=======================
+		- To check whether a given condition is either True or False
+		- if => single cases
+		- if-else => two cases
+		- nested if => two or more cases
+		- elif => two or more n number of cases
+
+	Loops:
+	======
+		- To control the flow of execution
+		- for => for known ranges
+		- while => for known adn unknown ranges, Infinity Loop
+
+	range:
+	=====
+	 range(stop):
+	 	-> 0
+	 	-> 1
+	 	- stop-1
+	 	range(5)
+	 		0 1 2 3 4
+	 range(start,stop):
+	 	-> start value
+	 	-> 1 
+	 	-> stop-1
+	 	range(1,10)
+	 		1 2 3 4 5 6 7 8 9
+	range(start,stop,step)
+		-> start
+		-> increm/decr with step
+		-> stop-1
+		range(2,10,3)
+			2 5 8
+
+	Jumping Statements:
+	===================
+		- break 
+		- continue
+		- pass
+		- return
+
+	Inner Loops:
+	============
+		- Loop within a Loop
+
+	Functions:
+	==========
+		- To Perform a specific task
+		- Predefined or Builtin or Library
+		- User Defined 
+			=> With returntype and with arguments
+			=> With returntype and without arguments
+			=> Without returntype and with arguments
+			=> Without returntype and without arguments
+		Syntax:
+		=======
+		def functionname(arguments):
+			//stmnts
+			return return_value
+
+	Packages and Modules:
+	=====================
+		Package => Folder
+		Module => .py file
+
+		** from packagename import modulename
+		** from packagename.modulename import *
+		** import modulename
