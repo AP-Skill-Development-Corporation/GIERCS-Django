@@ -1,0 +1,97 @@
+Day-03[09-11-2022]:
+===================
+	Good Morning to All...
+
+	Admin App Files Overview:
+	=========================
+	- In Admin app i.e., inside of prject folder we can observe same folder it states to a admin app in that it consists of some files such as
+		- init => It also considered as a python file
+		- asgi => Asynchronous Gateway Interface [Deployment]
+		- wsgi => Web server Gateway Interface [Deployment]
+		- settings => All configurations such as mail,app,database,.html,.css etc., are configured in this settings file
+		- urls => To check the url action what it has to do
+
+	Execution of a project:
+	=======================
+	- Open command prompt where the manage.py file exists then we need to run a project then we need to use the command such as
+		=> manage.py runserver
+					or
+		=> python manage.py runserver
+	- It will runs a server with default host number and port number such as like "http://127.0.0.1:8000"
+	- We need to pass the url name and port number in browser then the default page will be displayed in a browser
+
+	UserApp Creation:
+	=================
+	- Navigate to a location where manage.py file exists then navigate to the path through command prompt then we need to type hte command such as
+		=> manage.py startapp "appname"
+					or
+		=> django-admin startapp "appname"
+		Ex:
+		   manage.py startapp CSApp
+
+	UserApp Files Overview:
+	=======================
+	- init => It also considered as a python file
+	- admin => For user table access we need to configure here to display for an admin
+	- apps => In this app configurations are done for an app
+	- models => Talble creation and some methods related to tables
+	- tests => It can be used on testing purposes of a project such as "blackbox" and "whitebox"
+	- views => Business Logic is to be implemented in this file
+
+	Architecture of Django:
+	=======================
+	- Django Follows MVT desing pattern here MVT means model,view and template
+	- Main controller in Django is urls and views [these are views]
+	- In template the data can't display directly we need to use DTL Language [Django Template Language]
+	- Model means related to Database like creating table,renaming and filed names to a table etc.,
+
+	UserApp Urls Running Procedure:
+	===============================
+	- First We need to configure our user app in settings.py file where "INSTALLED_APPS" variable exists 
+		INSTALLED_APPS = [
+			'.....',
+			'.....',
+			'userappname',
+			]
+	- After Configuring then we need to create an url path the url file can be exists in admin app. In url.py consists of urlpatterns variable name so there we need to create a user defined path to access user defined function
+		urlpatterns = [
+			path('admin/',admin.site.urls),
+			path('urlname/',modulename.functioname),
+			]
+	- In path we need to pass 3 parameters such as 
+		path('urlname',modulename.functioname,name="nameofurl"),
+		=> In path the first parameter can be accessed in a browser that is to be configured in a path
+		=> second parameter is modulename.functionname here we need to access a function what to display for a user
+		=> third parameter is used in linking of a user these can be used for redirecting to a page when a button is clicked
+	- After mentioning the path then we need to import the views that is existing in the userapp so the import will be
+		=> from appname import module
+		=> from CSApp import views
+	- Then we need to implement a function that is to be mentioned in a urls of a path
+		Then the function will be coded as 
+			def functionname(self):
+				return returnvalue
+		=> Here the self or any variable is to be mentioned because the function will be executed as amethod instead of a class because the request is to be accessed from a user so it follows the default constructor type mechanism
+		=> To display something reponse to a user then we are importing a class i.e.,
+			** from django.http import HttpResponse
+			Here the HttpResponse is a class that returns a string to a browser
+	- After implementing the function then we need to run a server and try to check in a browser then we need to access the urlname such as
+		http://127.0.0.1:8000/urlname/
+		Here We can use 127.0.0.1 or else localhost
+		8000 is default port number for django project
+		urlname is mentioned in urlpattern of a path function that exists in a first paramter name
+	- Then it gives some response to a user that is mentioned in HttpResponse of a function in views.py file
+
+	Dynamic url mapping:
+	====================
+	- Here the values can be sent along with the urlname such as either it is in string data type or integer
+	- Then the url can be written as
+		path('urlname/<datatype:variablename>/',modulename.functionname),
+		Here we can assign any data type either it may be string or integer then we can send those data type values to a function
+	- The value from a url can be redirect to a function then the data can be displayed by using HttpResponse while accessing a paramtere variablename
+		def functioname(self,variablename):
+			return HttpResponse("Something message {}".format(variablename))
+	- After creating the function then we need to send the values in url like
+		http://127.0.0.1:8000/urlname/value/
+		Then the value can be displayed in the browser based on HttpResponse created in views
+	- Similary we can pass n number of values to an url and that can be passed to a function and returns those values in browser based on HttpResponse
+
