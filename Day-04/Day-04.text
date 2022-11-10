@@ -1,0 +1,29 @@
+Day-04[10-11-2022]:
+===================
+	Good Morning to All...
+
+	Dynamic url mapping:
+	====================
+	- Here the values can be sent along with the urlname such as either it is in string data type or integer
+	- Then the url can be written as
+		path('urlname/<datatype:variablename>/',modulename.functionname),
+		Here we can asssign any data type either it may be string or integer then we can send those data type values to a function
+	- The value from a url can be redirect to a function then the data can be displayed by using HttpResponse while accessing a paramtere variablename
+		def functioname(self,variablename):
+			return HttpResponse("Something message {}".format(variablename))
+	- After creating the function then we need to send the values in url like
+		http://127.0.0.1:8000/urlname/value/
+		Then the value can be displayed in the browser based on HttpResponse created in views
+	- Similary we can pass n number of values to an url and that can be passed to a function and returns those values in browser based on HttpResponse
+
+	Flow of Execution:
+	==================
+	HttpResponse and Request
+	HttpResponse with string
+	Dynamic Url Mapping
+	HttpResponse with single parameter,two or more n number of parameters
+	HttpResponse with html tag
+	HttpResponse with html tag with css
+	HttpResponse with html structure
+	HttpResponse with Javascript
+	Template file access
