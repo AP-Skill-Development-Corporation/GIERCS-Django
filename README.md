@@ -19,4 +19,11 @@
   - Framework, python frameworks, Introduction to Django, Advantages and Disadvantages, Applications and history of it
   - Overview of Admin app files, Userapp Creation and overview of the files
   - Url creation and interface between an url and views
+  - Http Request and Responses
   - Dynamic url mapping with single and two parameters
+
+## Day-04(10-11-2022):
+  - Http Response with html tag, css, html structure, javascript etc.,
+  - Django Templates
+  - Interface between controller and templates
+  
